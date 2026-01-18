@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css"><!-- do not remove this line! -->
+    <title>Sabores 2024</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <include src="./views/header.html"></include>
+
+    <main class="flex flex-col gap-16 pb-16">
+      <section class="bg-panel/60 py-12">
+        <div class="page-shell bg-panel/70">
+          <div class="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+            <div class="mx-auto w-full max-w-[460px] rounded-[14px] border-4 border-primary bg-panel/80 p-6">
+              <img class="h-auto w-full rounded-[10px] object-cover" src="./assets/images/hero-table.jpg" alt="Mesa con platos tradicionales listos para degustar en las jornadas de cocina" loading="lazy" />
+            </div>
+            <div class="space-y-4 text-center lg:text-left">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Jornadas de Cocina Tradicional 2024 - Barcelona</p>
+              <h1 class="text-balance text-[clamp(2rem,3vw+1rem,2.9rem)] font-semibold text-primary">Sabores que cuentan historias</h1>
+              <p class="mx-auto max-w-[620px] text-sm text-ink lg:mx-0">Tres dias de charlas, degustaciones y talleres practicos con cocineros que preservan las recetas de siempre.</p>
+              <include src="./views/components/cta.html"></include>
+            </div>
+          </div>
+          <div class="mt-8 mx-auto max-w-[720px]">
+            <include src="./views/components/details.html"></include>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

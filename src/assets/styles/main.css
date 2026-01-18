@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@source "../../**/*.{html,js}";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@theme {
+  --font-sans: "Montserrat", "Segoe UI", "Trebuchet MS", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", "Times New Roman", serif;
+  --color-primary: #3b86d1;
+  --color-accent: #4c8fe0;
+  --color-ink: #1e558c;
+  --color-surface: #f5f8ff;
+  --color-panel: #e2eefe;
+  --color-line: #d5e5ff;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply m-0 bg-surface text-ink font-sans antialiased;
+    line-height: 1.6;
+  }
+
+  a {
+    @apply text-primary font-semibold;
+  }
+
+  a:hover {
+    @apply text-ink;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  img {
+    @apply block;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-[1080px] rounded-[28px] bg-white px-6 py-10 shadow-[0_18px_50px_rgba(41,91,145,0.08)] md:px-10;
+  }
+
+  .section-title {
+    @apply text-center text-[clamp(2rem,3vw+1rem,2.4rem)] font-semibold text-primary;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-primary/90;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-primary px-6 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10;
+  }
+
+  .tag-pill {
+    @apply inline-flex items-center rounded-full bg-panel px-3 py-1 text-xs font-semibold text-ink;
+  }
+
+  .soft-card {
+    @apply rounded-2xl border border-line bg-white p-5 shadow-[0_12px_30px_rgba(41,91,145,0.06)];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

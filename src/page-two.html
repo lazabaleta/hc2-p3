@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css"><!-- do not remove this line! -->
+    <title>Speakers · Sabores 2024</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="flex flex-col gap-16 pb-16">
+      <section class="py-12">
+        <div class="page-shell">
+          <h2 class="section-title">Speakers</h2>
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <include src="./views/components/speakers/speaker-lucia.html"></include>
+            <include src="./views/components/speakers/speaker-mateo.html"></include>
+            <include src="./views/components/speakers/speaker-aina.html"></include>
+            <include src="./views/components/speakers/speaker-nahuel.html"></include>
+            <include src="./views/components/speakers/speaker-maria.html"></include>
+            <include src="./views/components/speakers/speaker-jaime.html"></include>
+          </div>
+          <p class="mt-6 text-center text-sm text-slate-500">Puedes proponer mas ponentes o cocineros invitados.</p>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

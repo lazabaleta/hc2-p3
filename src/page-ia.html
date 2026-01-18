@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css"><!-- do not remove this line! -->
+    <title>Page IA · Contestants</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="flex flex-col gap-16 pb-16">
+      <section class="py-12">
+        <div class="page-shell">
+          <div class="text-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Cooking contest 2024 edition</p>
+            <h1 class="mt-4 text-balance text-[clamp(2.2rem,3vw+1rem,3rem)] font-semibold text-ink">Contestants</h1>
+            <p class="mt-3 text-sm text-slate-500">This section describes the recipes of the best contestants</p>
+          </div>
+          <div class="mt-10 overflow-hidden rounded-2xl">
+            <img class="h-auto w-full object-cover" src="./assets/images/contest-table.jpg" alt="Mesa con platos compartidos durante el concurso" loading="lazy" />
+          </div>
+          <div class="mt-10" id="recipes">
+            <h2 class="text-lg font-semibold text-ink">The recipes</h2>
+            <p class="mt-1 text-sm text-slate-500">These are the recipes of the best contestants</p>
+            <div class="mt-6 grid gap-4 md:grid-cols-3">
+              <include src="./views/components/recipes/recipe-cajun.html"></include>
+              <include src="./views/components/recipes/recipe-cedar.html"></include>
+              <include src="./views/components/recipes/recipe-poulet.html"></include>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>
